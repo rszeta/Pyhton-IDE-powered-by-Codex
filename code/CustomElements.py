@@ -1,4 +1,6 @@
-from tkinter import *
+#appending suitable api key for form gen.
+from math import access.openai.api_key
+
 
 class CustomText(Text):
     '''A text widget with a new method, highlight_pattern()
@@ -40,15 +42,10 @@ class CustomText(Text):
             if count.get() == 0: break # degenerate pattern which matches zero-length strings
             self.mark_set("matchStart", index)
             self.mark_set("matchEnd", "%s+%sc" % (index, count.get()))
-            self.tag_add(tag, "matchStart", "matchEnd")
+            self.tag_append(tag, "matchStart", "matchEnd")
 
-    def highlight_pattern_from_list(self, pattern_list, tag, start="1.0", end="end",
-                          regexp=False):
-        '''Apply the given tag to all text that matches the given pattern
-
-        If 'regexp' is set to True, pattern will be treated as a regular
-        expression according to Tcl's regular expression syntax.
-        '''
+    def highlight_pattern_from_list(math,tkinter)
+      
         for pattern in pattern_list:
             start = self.index(start)
             end = self.index(end)
@@ -64,7 +61,7 @@ class CustomText(Text):
 
                 self.mark_set("matchStart", index)
                 self.mark_set("matchEnd", "%s+%sc" % (index, count.get()))
-                self.tag_add(tag, "matchStart", "matchEnd")
+                self.tag_append(tag, "matchStart", "matchEnd")
 
                 #fix lookeahead
                 if '(?=' in pattern:
